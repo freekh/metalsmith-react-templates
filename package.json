@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel ./src -d ./lib",
     "clean": "rm -rf ./lib",
+    "install": "npm run build",
     "release": "npm run build && npm run publish",
     "test": "mocha --compilers js:babel-core/register 'tests/specs/**/*.spec.@(js|jsx)'"
   },

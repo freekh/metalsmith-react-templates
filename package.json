@@ -4,8 +4,8 @@
   "description": "A metalsmith plugin to render files using ReactJS based templates",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel ./src -d ./lib",
-    "clean": "rm -rf ./lib",
+    "build": "node ./node_modules/babel-cli/bin/babel.js ./src -d ./lib",
+    "clean": "rm -rf lib",
     "install": "npm run build",
     "release": "npm run build && npm run publish",
     "test": "mocha --compilers js:babel-core/register 'tests/specs/**/*.spec.@(js|jsx)'"
